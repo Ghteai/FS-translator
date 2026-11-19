@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FS Arabic Translator – KPMG</title>
+<style>
+/* KPMG brand colours (check against the internal brand portal).
+   No external fonts or scripts: everything stays on this machine. */
+:root{
+  --kpmg-blue:#00338D; --cobalt:#1E49E2; --dark-blue:#0C233C; --pacific:#00B8F5; --light-blue:#ACEAFF;
+  --ink:#0C233C; --muted:#5F6B80; --faint:#8A95A8; --line:#E4E8F0; --surface:#FFFFFF; --canvas:#F4F6FB;
+  --tint:#EEF3FF; --ice:#E7F7FE;
+  --amber:#A15C00; --amber-soft:#FFF4E0; --amber-dot:#F2A900;
+  --green:#0B7A55; --green-soft:#E4F5EE; --red:#B3261E; --red-soft:#FDECEA;
+  --grad:linear-gradient(135deg,var(--cobalt) 0%,var(--pacific) 100%);
+  --shadow:0 1px 2px rgba(12,35,60,.05),0 10px 30px -12px rgba(12,35,60,.16);
+  --shadow-lift:0 2px 4px rgba(12,35,60,.06),0 18px 40px -14px rgba(30,73,226,.28);
+  --r-lg:20px; --r-md:14px; --r-sm:10px;
+  --sans:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --display:"Segoe UI Variable Display","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --arabic:"IBM Plex Sans Arabic","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--canvas);color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:3px solid var(--pacific);outline-offset:2px;border-radius:8px}
+.hidden{display:none !important}
+button{font:600 14px var(--sans);cursor:pointer;border:0;color:inherit;background:none}
+button:disabled{cursor:not-allowed}
+
+/* ---------- shell: navy sidebar + centred workspace -------------------------- */
+.shell{display:grid;grid-template-columns:272px 1fr;min-height:100vh}
+.side{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:22px;padding:26px 18px 22px;
+  color:#DCE6F7;background:linear-gradient(180deg,#0C233C 0%,#00338D 120%)}
+/* White (reversed) version of the official logo, centred on the navy sidebar */
+.brand{display:flex;justify-content:center;align-items:center;padding:8px 0 4px}
+.brand img{height:54px;width:auto;display:block}
+.wordmark{font:800 26px/1 var(--display);letter-spacing:.03em;color:#fff}
+.product{padding:0 8px;text-align:center}
+.product b{display:block;font:600 17px/1.25 var(--display);color:#fff}
+.new{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;background:#fff;color:var(--kpmg-blue);
+  box-shadow:0 8px 20px -10px rgba(0,0,0,.5);transition:transform .15s ease}
+.new:hover{transform:translateY(-1px)}
+.side h4{margin:0;font:600 12px var(--sans);color:#9FB2D3}
+.recent-head{display:flex;align-items:center;justify-content:space-between;margin:0 8px 6px}
+.clear{font-size:12px;font-weight:600;color:#9FB2D3;padding:3px 10px;border-radius:999px;transition:background .15s,color .15s}
+.clear:hover{background:rgba(255,255,255,.1);color:#fff}
+.recent{flex:1;overflow:auto;display:flex;flex-direction:column;gap:2px;margin:0 -6px;padding:0 6px}
+.recent a{display:block;padding:9px 10px;border-radius:var(--r-sm);color:#E8EEF9;text-decoration:none;transition:background .15s}
+.recent a:hover{background:rgba(255,255,255,.08)}
+.recent a.on{background:rgba(255,255,255,.14)}
+.recent .fn{display:block;font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recent .sub{display:flex;align-items:center;gap:6px;font-size:12px;color:#9FB2D3}
+.dot{width:7px;height:7px;border-radius:50%;background:#7C8BA5;flex:none}
+.dot.done{background:#3DDC97}.dot.flag{background:var(--amber-dot)}.dot.error,.dot.cancelled{background:#FF7A6E}.dot.running{background:var(--pacific)}
+.local{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:var(--r-md);background:rgba(255,255,255,.07);font-size:12.5px;line-height:1.45}
+.local::before{content:"";width:8px;height:8px;margin-top:5px;border-radius:50%;background:var(--pacific);box-shadow:0 0 0 4px rgba(0,184,245,.22);flex:none}
+
+.main{padding:36px clamp(18px,4vw,56px) 64px;background:
+  radial-gradient(900px 420px at 100% -10%,rgba(0,184,245,.10),transparent 60%),
+  radial-gradient(700px 380px at 0% 0%,rgba(30,73,226,.07),transparent 60%)}
+.inner{max-width:1040px;margin:0 auto}
+.view{animation:enter .28s ease both}
+@keyframes enter{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:28px}
+h1{font:600 clamp(26px,3vw,34px)/1.15 var(--display);margin:0;letter-spacing:-.015em}
+h2{font:600 20px/1.3 var(--display);margin:0}
+h3{font:600 16px/1.3 var(--display);margin:0 0 14px}
+.lede{margin:8px 0 0;color:var(--muted);max-width:62ch}
+.hint{font-size:13px;color:var(--muted)}
+.err{color:var(--red);font-weight:600}
+
+/* ---------- upload ----------------------------------------------------------- */
+.hero{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:22px}
+.drop{position:relative;display:grid;place-items:center;min-height:230px;padding:28px;border-radius:var(--r-lg);cursor:pointer;text-align:center;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(135deg,rgba(30,73,226,.35),rgba(0,184,245,.35)) border-box;
+  border:2px dashed transparent;transition:box-shadow .2s,transform .2s}
+.drop:hover{box-shadow:var(--shadow-lift)}
+.drop.over{box-shadow:var(--shadow-lift);transform:scale(1.005);background:linear-gradient(var(--ice),var(--ice)) padding-box,var(--grad) border-box}
+.drop-icon{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;margin:0 auto 14px;background:var(--grad);color:#fff;box-shadow:0 12px 24px -10px rgba(30,73,226,.6)}
+.drop strong{display:block;font:600 18px var(--display);color:var(--ink)}
+.drop .hint{margin-top:4px}
+.file-chip{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:var(--tint);color:var(--kpmg-blue);font-weight:600}
+.settings{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:flex-end;margin-top:22px}
+.field{display:flex;flex-direction:column;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.pill-input{appearance:none;font:600 14px var(--sans);color:var(--ink);background:var(--canvas);border:1px solid transparent;border-radius:999px;padding:10px 16px;min-width:0;transition:border-color .15s,background .15s}
+.pill-input:hover{background:#EDF1F8}
+.pill-input:focus{border-color:var(--cobalt);background:#fff;outline:none}
+select.pill-input{padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235F6B80' stroke-width='1.8'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;min-width:210px}
+input.pill-input{width:130px}
+.seg{display:inline-flex;padding:4px;border-radius:999px;background:var(--canvas)}
+.seg button{padding:7px 14px;border-radius:999px;color:var(--muted);transition:background .15s,color .15s,box-shadow .15s}
+.seg button.on{background:#fff;color:var(--kpmg-blue);box-shadow:0 2px 8px -3px rgba(12,35,60,.25)}
+.go{margin-left:auto;padding:13px 30px;border-radius:999px;background:var(--grad);color:#fff;font-size:15px;box-shadow:0 12px 24px -12px rgba(30,73,226,.8);transition:transform .15s,box-shadow .15s,opacity .15s}
+.go:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 16px 28px -12px rgba(30,73,226,.9)}
+.go:disabled{opacity:.35;box-shadow:none}
+.ghost{padding:12px 22px;border-radius:999px;background:var(--canvas);color:var(--kpmg-blue);transition:background .15s}
+.ghost:hover:not(:disabled){background:#E6ECF8}
+.ghost:disabled{opacity:.5}
+#modelHint{margin-top:14px}
+.fixed-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--tint);color:var(--kpmg-blue);font:600 14px var(--sans)}
+.fixed-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad)}
+
+/* ---------- progress ----------------------------------------------------------- */
+.progress-wrap{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.ring{position:relative;width:148px;height:148px}
+.ring svg{transform:rotate(-90deg)}
+.ring .track{stroke:var(--canvas)}
+.ring .fill{stroke:url(#ringGrad);stroke-linecap:round;transition:stroke-dashoffset .5s ease}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:600 30px var(--display)}
+.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.step{display:flex;align-items:center;gap:12px;color:var(--faint);font-weight:600;font-size:14px}
+.step::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid currentColor;flex:none;transition:all .2s}
+.step.active{color:var(--cobalt)}
+.step.active::before{background:var(--cobalt);box-shadow:0 0 0 5px rgba(30,73,226,.15)}
+.step.done{color:var(--green)}
+.step.done::before{background:var(--green);border-color:var(--green)}
+#barFill{display:none}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-size:13px;color:var(--muted)}
+.current{margin-top:10px;padding:10px 14px;border-radius:var(--r-sm);background:var(--canvas);font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.current:empty{display:none}
+
+/* ---------- results ------------------------------------------------------------- */
+.result-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.result-head h2{font-size:24px}
+.result-head>div:first-child{flex:1 1 380px;min-width:0}
+.result-head>div:last-child{margin-left:auto}
+#schema{margin-top:6px}
+.stats{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:10px;margin-top:22px}
+.stat{padding:14px 14px 12px;border-radius:var(--r-md);background:var(--canvas);transition:transform .15s}
+.stat:hover{transform:translateY(-1px)}
+.stat b{display:block;font:600 24px/1.15 var(--display);color:var(--kpmg-blue);white-space:nowrap}
+.stat span{font-size:12.5px;color:var(--muted)}
+.stat small{display:block;margin-top:2px;font-size:12px;color:var(--faint)}
+.stat.flag{background:var(--amber-soft)}
+.stat.flag b{color:var(--amber)}
+
+.grid2{display:grid;grid-template-columns:1fr 1.35fr;gap:20px}
+dl{display:grid;grid-template-columns:110px 1fr;gap:10px 14px;margin:0}
+dt{color:var(--muted);font-size:13px;padding-top:1px}
+dd{margin:0;font-weight:600}
+.ar{font-family:var(--arabic);direction:rtl;text-align:right;font-size:16px;line-height:1.8}
+.terms{max-height:330px;overflow:auto;margin:0 -8px;padding:0 8px}
+.terms table{width:100%;border-collapse:collapse}
+.terms td{padding:10px 6px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:14px}
+.terms tr:last-child td{border-bottom:0}
+.terms thead{display:none}
+.pill{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--canvas);color:var(--muted)}
+.pill.glossary{background:var(--tint);color:var(--kpmg-blue)}
+.pill.context{background:var(--ice);color:#006A90}
+.pill.learned{background:var(--green-soft);color:var(--green)}
+
+.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.toolbar .seg button{display:inline-flex;gap:6px;align-items:center}
+.tab .n{font-weight:500;color:var(--faint)}
+.tab.on .n{color:var(--cobalt)}
+#search{margin-left:auto;width:260px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%238A95A8' stroke-width='2'%3E%3Ccircle cx='7' cy='7' r='5'/%3E%3Cpath d='M11 11l4 4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:14px center;padding-left:38px}
+.pairs{display:grid;gap:10px}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:border-color .15s,box-shadow .15s}
+.pair:hover{border-color:#CCD6EA;box-shadow:0 8px 22px -14px rgba(12,35,60,.3)}
+.pair>div{padding:14px 18px}
+.pair .en{border-right:1px solid var(--line)}
+.pair .where{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:11.5px;font-weight:600;color:var(--faint)}
+.pair.flagged{border-color:#F3D9A4;background:linear-gradient(90deg,#FFFBF3,#fff 60%)}
+.pair.flagged .where::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber-dot)}
+.pair.skipped{background:#FAFBFD;color:var(--muted)}
+.tag{display:inline-block;font:600 10px/1 var(--sans);direction:ltr;padding:3px 5px;margin:0 2px;border-radius:5px;background:var(--canvas);color:var(--faint);vertical-align:1px}
+.num{color:var(--kpmg-blue);background:var(--ice);border-radius:5px;padding:0 3px;font-weight:600}
+.issue{display:flex;gap:8px;margin-top:10px;font:13px/1.45 var(--sans);color:var(--amber);background:var(--amber-soft);border-radius:var(--r-sm);padding:8px 12px;direction:ltr;text-align:left}
+.termhint{display:block;margin-top:6px;font-size:12px;color:var(--faint)}
+.empty{color:var(--muted);text-align:center;padding:36px}
+
+@media (max-width:980px){
+  .shell{grid-template-columns:1fr}
+  .side{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;padding:16px}
+  .brand{padding:0}.brand img{height:32px}
+  .product,.side h4,.recent,.local{display:none}
+  .new{margin-left:auto;padding:10px 16px}
+  .grid2{grid-template-columns:1fr}
+  .stats{grid-auto-flow:row;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+}
+@media (max-width:640px){
+  .card{padding:20px}
+  .hero{flex-direction:column;align-items:flex-start}
+  .progress-wrap{grid-template-columns:1fr;justify-items:center}
+  .pair{grid-template-columns:1fr}.pair .en{border-right:0;border-bottom:1px solid var(--line)}
+  .go{width:100%;margin-left:0}#search{width:100%;margin-left:0}
+  select.pill-input,input.pill-input{width:100%}.field{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <!-- Sidebar: brand, new translation, recent translations -->
+  <aside class="side">
+    <div class="brand">
+      <img id="logo" src="/static/logo_white.png" alt="KPMG" onerror="this.remove()" onload="document.getElementById('wordmark').remove()">
+      <span class="wordmark" id="wordmark">KPMG</span>
+    </div>
+    <div class="product">
+      <b>FS Arabic Translator</b>
+    </div>
+    <button class="new" id="newBtn">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      New translation
+    </button>
+    <div id="recentWrap" class="hidden" style="display:flex;flex-direction:column;min-height:0;flex:1">
+      <div class="recent-head">
+        <h4>Recent translations</h4>
+        <button class="clear" id="clearRecent" title="Delete all finished translations">Clear</button>
+      </div>
+      <nav class="recent" id="recent"></nav>
+    </div>
+    <div class="local">Translated on this machine with a local model. No text leaves it.</div>
+  </aside>
+
+  <main class="main">
+    <div class="inner">
+
+      <!-- 1. Upload -->
+      <section class="view" id="upload">
+        <div class="hero">
+          <div>
+            <h1>Translate a financial statement</h1>
+            <p class="lede">Upload an English Word file. Numbers stay locked, standard IFRS terms are applied, and you get an Arabic Word file with the same layout, right to left.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="drop" id="drop" tabindex="0" role="button" aria-label="Choose a Word file">
+            <input type="file" id="file" accept=".docx" hidden>
+            <div id="dropText">
+              <div class="drop-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 17v-6M9.5 13.5 12 11l2.5 2.5"/></svg></div>
+              <strong>Drop your .docx here</strong>
+              <div class="hint">or click to choose a file</div>
+            </div>
+          </div>
+          <div class="settings">
+            <label class="field">Model
+              <select id="model" class="pill-input"></select>
+            </label>
+            <div class="field">Standard terms
+              <span class="fixed-pill" title="Standard IFRS terminology as used in GCC financial statements">GCC IFRS terms</span>
+              <input type="hidden" id="termsVariant" value="gcc">
+            </div>
+            <label class="field">Passages
+              <input type="number" id="limit" min="1" placeholder="All" class="pill-input">
+            </label>
+            <button class="go" id="start" disabled>Translate</button>
+          </div>
+          <div class="hint" id="modelHint">Checking local models…</div>
+        </div>
+      </section>
+
+      <!-- 2. Progress -->
+      <section class="view hidden" id="progress">
+        <div class="card">
+          <div class="progress-wrap">
+            <div class="ring">
+              <svg width="148" height="148" viewBox="0 0 148 148" aria-hidden="true">
+                <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E49E2"/><stop offset="1" stop-color="#00B8F5"/></linearGradient></defs>
+                <circle class="track" cx="74" cy="74" r="62" fill="none" stroke-width="12"/>
+                <circle class="fill" id="ringFill" cx="74" cy="74" r="62" fill="none" stroke-width="12" stroke-dasharray="389.6" stroke-dashoffset="389.6"/>
+              </svg>
+              <b id="ringPct">0%</b>
+            </div>
+            <div>
+              <h2 id="progTitle">Translating</h2>
+              <ul class="steps">
+                <li class="step" data-s="queued">Waiting for the previous document</li>
+                <li class="step" data-s="context">Reading the document</li>
+                <li class="step" data-s="translating">Translating passages</li>
+                <li class="step" data-s="writing">Writing the Arabic file</li>
+                <li class="step" data-s="done">Done</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bar"><div id="barFill"></div></div>
+          <div class="meta"><span id="progCount"></span><span id="progTime"></span></div>
+          <div class="current" id="progCurrent"></div>
+          <div class="err" id="progError" style="margin-top:10px"></div>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:18px">
+            <button class="ghost" id="cancel">Cancel</button>
+            <span class="hint" id="cancelHint"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Results -->
+      <section class="view hidden" id="results">
+        <div class="card">
+          <div class="result-head">
+            <div>
+              <h2 id="resTitle">Result</h2>
+              <div class="hint" id="schema"></div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="ghost" id="again">Translate another</button>
+              <button class="go" id="download" style="margin-left:0">Download Arabic .docx</button>
+            </div>
+          </div>
+          <div class="err" id="resError"></div>
+          <div class="stats" id="stats"></div>
+        </div>
+
+        <div class="grid2" style="margin-top:20px">
+          <div class="card">
+            <h3>Document</h3>
+            <dl id="context"></dl>
+          </div>
+          <div class="card">
+            <h3>Terms fixed for this document</h3>
+            <div class="terms"><table><thead><tr><th>English</th><th>Arabic</th><th>Source</th></tr></thead><tbody id="terms"></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <div class="toolbar">
+            <h3 style="margin:0 8px 0 0">Passages</h3>
+            <div class="seg" role="tablist">
+              <button class="tab" data-f="flagged">Flagged <span class="n" id="nFlagged"></span></button>
+              <button class="tab on" data-f="translated">Translated <span class="n" id="nTranslated"></span></button>
+              <button class="tab" data-f="skipped">Numbers <span class="n" id="nSkipped"></span></button>
+              <button class="tab" data-f="all">All <span class="n" id="nAll"></span></button>
+            </div>
+            <input type="search" id="search" class="pill-input" placeholder="Search English or Arabic">
+          </div>
+          <div class="pairs" id="rows"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let chosen = null, jobId = null, timer = null, report = null, filter = "translated";
+const DROP_HTML = $("dropText").innerHTML;
+
+// ---- models ----
+fetch("/api/models").then(r => r.json()).then(d => {
+  const sel = $("model");
+  for (const m of d.models) sel.add(new Option(m, m));
+  sel.add(new Option("Pseudo-Arabic (layout test, no model)", d.fake));
+  sel.value = d.default;
+  $("modelHint").innerHTML = d.error
+    ? `<span class="err">${esc(d.error)}</span> Only the pseudo-Arabic layout test is available.`
+    : `${d.models.length} local models available. To try a long file quickly, set how many passages to translate.`;
+});
+
+// ---- upload ----
+const drop = $("drop"), file = $("file");
+drop.onclick = () => file.click();
+drop.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); file.click(); } };
+file.onchange = () => pick(file.files[0]);
+drop.ondragover = (e) => { e.preventDefault(); drop.classList.add("over"); };
+drop.ondragleave = () => drop.classList.remove("over");
+drop.ondrop = (e) => { e.preventDefault(); drop.classList.remove("over"); pick(e.dataTransfer.files[0]); };
+function pick(f) {
+  if (!f) return;
+  if (!f.name.toLowerCase().endsWith(".docx")) {
+    $("dropText").innerHTML = DROP_HTML + `<div class="err" style="margin-top:10px">That is not a Word .docx file. Choose a .docx.</div>`;
+    return;
+  }
+  chosen = f;
+  $("dropText").innerHTML = `<div class="file-chip">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+      ${esc(f.name)}</div>
+    <div class="hint" style="margin-top:10px">${(f.size / 1024).toFixed(0)} KB. Click to choose a different file.</div>`;
+  $("start").disabled = false;
+}
+
+$("start").onclick = async () => {
+  const fd = new FormData();
+  fd.append("file", chosen);
+  fd.append("model", $("model").value);
+  fd.append("limit", $("limit").value || "");
+  fd.append("terms", $("termsVariant").value);
+  $("start").disabled = true;
+  const r = await fetch("/api/jobs", { method: "POST", body: fd });
+  const job = await r.json();
+  if (!r.ok) { $("modelHint").innerHTML = `<span class="err">${esc(job.detail || "Upload failed")}</span>`; $("start").disabled = false; return; }
+  open_(job);
+  loadRecent();
+};
+
+function showView(id) {
+  for (const v of ["upload", "progress", "results"]) $(v).classList.toggle("hidden", v !== id);
+}
+
+// Open a job (also used for links like /#job=abc123 after a page reload).
+function open_(job) {
+  jobId = job.id;
+  location.hash = "job=" + job.id;
+  showView("progress");
+  $("progTitle").textContent = `Translating ${job.filename}`;
+  $("progError").textContent = "";
+  $("cancel").disabled = false;
+  $("cancelHint").textContent = "";
+  markRecent();
+  poll();
+}
+
+const fromHash = location.hash.match(/job=(\w+)/);
+if (fromHash) fetch(`/api/jobs/${fromHash[1]}`).then(r => r.ok ? r.json() : null).then(j => j && open_(j));
+
+function newTranslation() {
+  clearTimeout(timer);
+  history.replaceState(null, "", "/");
+  jobId = null;
+  showView("upload");
+  $("start").disabled = !chosen;
+  loadRecent();
+}
+$("again").onclick = newTranslation;
+$("newBtn").onclick = newTranslation;
+
+// ---- progress ----
+const ORDER = ["queued", "context", "translating", "writing", "done"];
+const RING = 389.6;
+async function poll() {
+  clearTimeout(timer);
+  const job = await (await fetch(`/api/jobs/${jobId}`)).json();
+  const idx = ORDER.indexOf(job.state);
+  document.querySelectorAll(".step").forEach(el => {
+    const i = ORDER.indexOf(el.dataset.s);
+    el.className = "step" + (job.state === "error" ? "" : i < idx || job.state === "done" ? " done" : i === idx ? " active" : "");
+  });
+  const pct = job.state === "done" ? 100 : job.total ? Math.round(100 * job.done / job.total) : 0;
+  $("barFill").style.width = pct + "%";
+  $("ringFill").style.strokeDashoffset = RING * (1 - pct / 100);
+  $("ringPct").textContent = pct + "%";
+  $("progCount").textContent =
+    job.state === "queued" ? `${job.queue_position} document${job.queue_position === 1 ? "" : "s"} ahead in the queue` :
+    job.state === "context" ? "Reading the start of the document for entity, period and key terms" :
+    job.total ? `${job.done} of ${job.total} passages translated` : "";
+  $("progTime").textContent = `${fmt(job.elapsed)} so far` + (job.eta != null ? `, about ${fmt(job.eta)} left` : "");
+  $("progCurrent").textContent = job.current ? stripTags(job.current) : "";
+  if (job.state === "error" || job.state === "cancelled") {
+    $("progError").textContent = job.state === "cancelled" ? "Translation cancelled." : "Translation failed: " + job.error;
+    $("cancel").disabled = true;
+    loadRecent();
+    return;
+  }
+  if (job.state === "done") { show(job); loadRecent(); return; }
+  timer = setTimeout(poll, 1000);
+}
+
+// ---- results ----
+function show(job) {
+  report = job.report;
+  showView("results");
+  $("resTitle").textContent = job.filename;
+  $("resError").textContent = "";
+  const s = report;
+  const stats = [
+    ["Passages translated", s.passages_translated],
+    ["Flagged for review", s.passages_flagged, "flag"],
+    ["Numbers & dates locked", s.numbers_and_dates_locked],
+    ["Fixed terms", s.fixed_terms, "", s.glossary_terms_used ? `${s.glossary_terms_used} from the standard list` : ""],
+    ["Number cells kept", s.passages_skipped_non_text],
+    ["Time", fmt(s.seconds)],
+  ];
+  if (s.passages_left_in_english_by_limit) stats.splice(2, 0, ["Left in English", s.passages_left_in_english_by_limit, "flag", "passage limit reached"]);
+  $("stats").innerHTML = stats.map(([l, v, c, sub]) =>
+    `<div class="stat ${c || ""}"><b>${v}</b><span>${l}</span>${sub ? `<small>${sub}</small>` : ""}</div>`).join("");
+  $("schema").innerHTML = s.schema_problems.length
+    ? `<span class="err">Word structure problems: ${esc(s.schema_problems.join("; "))}</span>`
+    : `Translated to Arabic with ${esc(s.translator.replace("ollama:", ""))}. Word structure check passed.${s.retries ? ` ${s.retries} passage${s.retries > 1 ? "s were" : " was"} retried automatically.` : ""}`;
+
+  const c = report.context || {};
+  const rows = [["Entity", c.entity_en], ["Arabic name", c.entity_ar, "ar"], ["Period", c.period_en],
+                ["Industry", c.industry], ["Framework", c.framework], ["Currency", c.currency]];
+  $("context").innerHTML = report.context
+    ? rows.map(([k, v, cls]) => `<dt>${k}</dt><dd class="${cls || ""}">${v ? esc(v) : "<span class='hint'>Not found</span>"}</dd>`).join("")
+      + (c.error ? `<dt>Note</dt><dd class="err">${esc(c.error)}</dd>` : "")
+    : `<dd class="hint" style="grid-column:1/-1">The pseudo-Arabic layout test does not read the document.</dd>`;
+
+  const terms = report.terms || [];
+  $("terms").innerHTML = terms.length
+    ? terms.map(t => `<tr><td>${esc(t.en)}</td><td class="ar">${esc(t.ar)}</td><td style="text-align:right"><span class="pill ${t.origin}">${t.origin}</span></td></tr>`).join("")
+    : `<tr><td colspan="3" class="empty">No fixed terms</td></tr>`;
+
+  const items = report.items;
+  $("nAll").textContent = items.length;
+  $("nFlagged").textContent = items.filter(i => i.issues.length).length;
+  $("nTranslated").textContent = items.filter(i => i.translatable && i.target).length;
+  $("nSkipped").textContent = items.filter(i => !i.translatable).length;
+  render();
+}
+
+$("download").onclick = async () => {
+  $("resError").textContent = "";
+  const r = await fetch(`/api/jobs/${jobId}/download`);
+  if (!r.ok) {
+    const d = await r.json().catch(() => ({}));
+    $("resError").textContent = "Download failed: " + (d.detail || r.status);
+    return;
+  }
+  const name = (r.headers.get("content-disposition") || "").match(/filename="?([^"]+)"?/)?.[1] || "translation_AR.docx";
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(await r.blob());
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+};
+
+$("cancel").onclick = async () => {
+  $("cancel").disabled = true;
+  $("cancelHint").textContent = "Stopping after the passage being translated.";
+  await fetch(`/api/jobs/${jobId}/cancel`, { method: "POST" });
+};
+
+// ---- recent translations (sidebar) ----
+async function loadRecent() {
+  const jobs = await fetch("/api/jobs").then(r => r.json()).catch(() => []);
+  $("recentWrap").classList.toggle("hidden", !jobs.length);
+  const label = { done: "done", error: "failed", cancelled: "cancelled", queued: "waiting" };
+  $("recent").innerHTML = jobs.map(j => {
+    const state = j.state in label ? j.state : "running";
+    const when = j.created ? new Date(j.created * 1000).toLocaleString([], { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) : "";
+    const status = j.state === "done" ? (j.flagged ? `${j.flagged} flagged` : "No flags") : (label[j.state] || "running");
+    const dot = j.state === "done" && j.flagged ? "flag" : state;
+    return `<a href="#job=${j.id}" data-job="${j.id}" title="${esc(j.filename)} (${esc(j.model || "")})">
+      <span class="fn">${esc(j.filename)}</span>
+      <span class="sub"><span class="dot ${dot}"></span>${status}<span style="margin-left:auto">${when}</span></span></a>`;
+  }).join("");
+  $("recent").querySelectorAll("a[data-job]").forEach(a => a.onclick = async (e) => {
+    e.preventDefault();
+    open_(await (await fetch(`/api/jobs/${a.dataset.job}`)).json());
+  });
+  markRecent();
+}
+$("clearRecent").onclick = async () => {
+  const n = $("recent").querySelectorAll("a").length;
+  if (!confirm(`Delete ${n === 1 ? "this translation" : `all ${n} translations`} from this machine?
+
+The uploaded files, the Arabic files and the reports are removed. Translations that are still running are kept. This cannot be undone.`)) return;
+  const r = await fetch("/api/jobs", { method: "DELETE" });
+  const d = await r.json().catch(() => ({}));
+  // A finished result on screen was just deleted: go back to the upload view.
+  if (!$("results").classList.contains("hidden")) newTranslation(); else await loadRecent();
+  if (d.kept_running) $("modelHint").textContent = `${d.removed} translations deleted. ${d.kept_running} still running and kept.`;
+};
+
+function markRecent() {
+  document.querySelectorAll("#recent a").forEach(a => a.classList.toggle("on", a.dataset.job === jobId));
+}
+loadRecent();
+
+// ---- passages ----
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
+  b.classList.add("on"); filter = b.dataset.f; render();
+});
+$("search").oninput = render;
+
+function render() {
+  if (!report) return;
+  const q = $("search").value.trim().toLowerCase();
+  let items = report.items.filter(i =>
+    filter === "all" ? true :
+    filter === "flagged" ? i.issues.length :
+    filter === "translated" ? i.translatable && i.target :
+    !i.translatable);
+  if (q) items = items.filter(i => (i.source + " " + (i.target || "")).toLowerCase().includes(q));
+  // flagged first, as on the review screen
+  items = [...items].sort((a, b) => (b.issues.length > 0) - (a.issues.length > 0));
+  $("rows").innerHTML = items.length ? items.map(row).join("")
+    : `<div class="empty">${filter === "flagged" ? "No passages need review." : "No passages match."}</div>`;
+}
+
+function row(i) {
+  const cls = i.issues.length ? "flagged" : !i.translatable ? "skipped" : "";
+  const values = Object.values(i.placeholders || {});
+  const en = rich(i.source, values) +
+    (i.terms && i.terms.length
+      ? `<span class="termhint" title="${esc(i.terms.map(t => t.en + " = " + t.ar).join("\n"))}">Fixed terms: ${i.terms.map(t => esc(t.en)).join(", ")}</span>` : "");
+  const ar = !i.translatable ? `<span class="hint">Kept as is</span>`
+    : i.target == null ? `<span class="hint">Not translated</span>`
+    : rich(i.target, null);
+  const issues = i.issues.map(x => `<div class="issue"><span>⚠</span><span>${esc(x)}</span></div>`).join("");
+  return `<article class="pair ${cls}">
+    <div class="en"><div class="where">${place(i)}</div>${en}</div>
+    <div class="ar">${ar}${issues}</div></article>`;
+}
+
+// "word/header1.xml#2" -> "Header", "word/document.xml#36" in a table -> "Table".
+function place(i) {
+  const part = i.id.split("#")[0].replace("word/", "").replace(/\d*\.xml$/, "");
+  const names = { document: i.in_table ? "Table" : "Body", header: "Header", footer: "Footer", footnotes: "Footnote", endnotes: "Endnote" };
+  return names[part] || part;
+}
+
+// Escape text, show formatting tags as chips, highlight locked numbers/dates.
+function rich(text, values) {
+  return text.split(/(<\/?[a-z]+\d+>)/).map((part, k) => {
+    if (k % 2) return `<span class="tag">${esc(part.replace(/[<>]/g, ""))}</span>`;
+    // Mark numbers on the raw text first, then escape (markers survive escaping).
+    // One pass with all values (longest first), so "0000" is never re-marked as "000".
+    let h = part;
+    if (values && values.length) {
+      const rx = new RegExp([...new Set(values)].sort((a, b) => b.length - a.length)
+        .map(v => v.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"), "g");
+      h = h.replace(rx, m => `\u0000${m}\u0001`);
+    } else {
+      h = h.replace(/\(?\d[\d,.\/%-]*\)?/g, m => `\u0000${m}\u0001`);
+    }
+    return esc(h).replace(/\u0000/g, '<span class="num">').replace(/\u0001/g, "</span>");
+  }).join("");
+}
+function stripTags(t) { return t.replace(/<\/?[a-z]+\d+>/g, ""); }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function fmt(sec) { sec = Math.round(sec || 0); const m = Math.floor(sec / 60), s = sec % 60; return m ? `${m}m ${String(s).padStart(2, "0")}s` : `${s}s`; }
+</script>
+</body>
+</html>

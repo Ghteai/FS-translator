@@ -1,0 +1,526 @@
+﻿en,ar,ar_ksa,category,status
+Financial statements,البيانات المالية,القوائم المالية,statements,standard
+Consolidated financial statements,البيانات المالية الموحدة,القوائم المالية الموحدة,statements,standard
+Separate financial statements,البيانات المالية المنفصلة,القوائم المالية المنفصلة,statements,standard
+Statement of financial position,بيان المركز المالي,قائمة المركز المالي,statements,standard
+Consolidated statement of financial position,بيان المركز المالي الموحد,قائمة المركز المالي الموحدة,statements,standard
+Statement of profit or loss,بيان الأرباح أو الخسائر,قائمة الربح أو الخسارة,statements,standard
+Statement of profit or loss and other comprehensive income,بيان الأرباح أو الخسائر والدخل الشامل الآخر,قائمة الربح أو الخسارة والدخل الشامل الآخر,statements,standard
+Statement of comprehensive income,بيان الدخل الشامل,قائمة الدخل الشامل,statements,standard
+Income statement,بيان الدخل,قائمة الدخل,statements,standard
+Statement of changes in equity,بيان التغيرات في حقوق الملكية,قائمة التغيرات في حقوق الملكية,statements,standard
+Statement of cash flows,بيان التدفقات النقدية,قائمة التدفقات النقدية,statements,standard
+Notes to the financial statements,إيضاحات حول البيانات المالية,إيضاحات حول القوائم المالية,statements,standard
+Note,إيضاح,,statements,standard
+Notes,إيضاحات,,statements,standard
+Independent auditor's report,تقرير مدقق الحسابات المستقل,تقرير المراجع المستقل,statements,standard
+Independent auditors' report,تقرير مدققي الحسابات المستقلين,تقرير المراجعين المستقلين,statements,standard
+Directors' report,تقرير مجلس الإدارة,,statements,standard
+Board of directors' report,تقرير مجلس الإدارة,,statements,standard
+General information,معلومات عامة,,statements,standard
+Contents,المحتويات,,statements,standard
+Page,صفحة,,statements,standard
+Assets,الموجودات,الأصول,assets,standard
+Non-current assets,الموجودات غير المتداولة,الأصول غير المتداولة,assets,standard
+Current assets,الموجودات المتداولة,الأصول المتداولة,assets,standard
+Total assets,مجموع الموجودات,إجمالي الأصول,assets,standard
+Total non-current assets,مجموع الموجودات غير المتداولة,إجمالي الأصول غير المتداولة,assets,standard
+Total current assets,مجموع الموجودات المتداولة,إجمالي الأصول المتداولة,assets,standard
+"Property, plant and equipment",الممتلكات والآلات والمعدات,الممتلكات والمصانع والمعدات,assets,standard
+Property and equipment,الممتلكات والمعدات,,assets,standard
+Right-of-use assets,موجودات حق الاستخدام,أصول حق الاستخدام,assets,standard
+Intangible assets,الموجودات غير الملموسة,الأصول غير الملموسة,assets,standard
+Goodwill,الشهرة,,assets,standard
+Investment properties,العقارات الاستثمارية,,assets,standard
+Investment property,العقار الاستثماري,,assets,standard
+Investment in associates,استثمار في شركات زميلة,,assets,standard
+Investment in a joint venture,استثمار في مشروع مشترك,,assets,standard
+Inventories,المخزون,,assets,standard
+Trade receivables,الذمم المدينة التجارية,,assets,standard
+Trade and other receivables,الذمم المدينة التجارية والأخرى,,assets,standard
+Prepayments,المصروفات المدفوعة مقدماً,,assets,standard
+Prepayments and other receivables,المصروفات المدفوعة مقدماً والذمم المدينة الأخرى,,assets,standard
+Cash and cash equivalents,النقد وما في حكمه,,assets,standard
+Cash and bank balances,النقد والأرصدة لدى البنوك,,assets,standard
+Bank balances,الأرصدة لدى البنوك,,assets,standard
+Term deposits,الودائع لأجل,,assets,standard
+Due from related parties,المستحق من أطراف ذات علاقة,,assets,standard
+Due from a related party,المستحق من طرف ذي علاقة,,assets,standard
+Contract assets,موجودات العقود,أصول العقود,assets,standard
+Deferred tax assets,موجودات الضريبة المؤجلة,أصول الضريبة المؤجلة,assets,standard
+Financial assets,الموجودات المالية,الأصول المالية,assets,standard
+Financial assets at fair value through profit or loss,الموجودات المالية بالقيمة العادلة من خلال الربح أو الخسارة,الأصول المالية بالقيمة العادلة من خلال الربح أو الخسارة,assets,standard
+Financial assets at amortised cost,الموجودات المالية بالتكلفة المطفأة,الأصول المالية بالتكلفة المطفأة,assets,standard
+Loans and advances,القروض والسلفيات,,assets,standard
+Loans and advances to customers,القروض والسلفيات للعملاء,,assets,standard
+Investment securities,الأوراق المالية الاستثمارية,,assets,review
+Assets held for sale,الموجودات المحتفظ بها للبيع,الأصول المحتفظ بها للبيع,assets,standard
+Liabilities,المطلوبات,الالتزامات,liabilities,standard
+Non-current liabilities,المطلوبات غير المتداولة,الالتزامات غير المتداولة,liabilities,standard
+Current liabilities,المطلوبات المتداولة,الالتزامات المتداولة,liabilities,standard
+Total liabilities,مجموع المطلوبات,إجمالي الالتزامات,liabilities,standard
+Total non-current liabilities,مجموع المطلوبات غير المتداولة,إجمالي الالتزامات غير المتداولة,liabilities,standard
+Total current liabilities,مجموع المطلوبات المتداولة,إجمالي الالتزامات المتداولة,liabilities,standard
+Total equity and liabilities,مجموع حقوق الملكية والمطلوبات,إجمالي حقوق الملكية والالتزامات,liabilities,standard
+Total liabilities and equity,مجموع المطلوبات وحقوق الملكية,إجمالي الالتزامات وحقوق الملكية,liabilities,standard
+Trade payables,الذمم الدائنة التجارية,,liabilities,standard
+Trade and other payables,الذمم الدائنة التجارية والأخرى,,liabilities,standard
+Accrued expenses,المصروفات المستحقة,,liabilities,standard
+Accruals,المستحقات,,liabilities,standard
+Lease liabilities,مطلوبات الإيجار,التزامات الإيجار,liabilities,standard
+Borrowings,القروض,,liabilities,standard
+Bank borrowings,القروض البنكية,,liabilities,standard
+Term loans,القروض لأجل,,liabilities,standard
+Bank overdrafts,السحب على المكشوف من البنوك,,liabilities,review
+Employees' end of service benefits,مكافآت نهاية الخدمة للموظفين,,liabilities,standard
+Provision for employees' end of service benefits,مخصص مكافآت نهاية الخدمة للموظفين,,liabilities,standard
+Due to related parties,المستحق إلى أطراف ذات علاقة,,liabilities,standard
+Due to a related party,المستحق إلى طرف ذي علاقة,,liabilities,standard
+Provisions,المخصصات,,liabilities,standard
+Contract liabilities,مطلوبات العقود,التزامات العقود,liabilities,standard
+Deferred income,الإيرادات المؤجلة,,liabilities,standard
+Income tax payable,ضريبة الدخل المستحقة,,liabilities,standard
+Zakat payable,الزكاة المستحقة,,liabilities,standard
+Customers' deposits,ودائع العملاء,,liabilities,standard
+Deferred tax liabilities,مطلوبات الضريبة المؤجلة,التزامات الضريبة المؤجلة,liabilities,standard
+Contingent liabilities,المطلوبات الطارئة,الالتزامات المحتملة,liabilities,review
+Commitments,الارتباطات,,liabilities,review
+Equity,حقوق الملكية,,equity,standard
+Total equity,مجموع حقوق الملكية,إجمالي حقوق الملكية,equity,standard
+Share capital,رأس المال,,equity,standard
+Share premium,علاوة إصدار الأسهم,,equity,standard
+Statutory reserve,الاحتياطي القانوني,الاحتياطي النظامي,equity,standard
+General reserve,الاحتياطي العام,,equity,standard
+Retained earnings,الأرباح المحتجزة,الأرباح المبقاة,equity,standard
+Accumulated losses,الخسائر المتراكمة,,equity,standard
+Treasury shares,أسهم الخزينة,,equity,standard
+Non-controlling interests,الحصص غير المسيطرة,,equity,standard
+Fair value reserve,احتياطي القيمة العادلة,,equity,standard
+Foreign currency translation reserve,احتياطي تحويل العملات الأجنبية,,equity,standard
+Dividends,توزيعات الأرباح,,equity,standard
+Proposed dividends,توزيعات الأرباح المقترحة,,equity,standard
+Revenue,الإيرادات,,profit or loss,standard
+Revenue from contracts with customers,الإيرادات من العقود مع العملاء,,profit or loss,standard
+Cost of sales,تكلفة المبيعات,,profit or loss,standard
+Cost of revenue,تكلفة الإيرادات,,profit or loss,standard
+Gross profit,إجمالي الربح,مجمل الربح,profit or loss,standard
+Other income,الإيرادات الأخرى,,profit or loss,standard
+General and administrative expenses,المصروفات العمومية والإدارية,,profit or loss,standard
+Selling and distribution expenses,مصروفات البيع والتوزيع,,profit or loss,standard
+Staff costs,تكاليف الموظفين,,profit or loss,standard
+Depreciation,الاستهلاك,,profit or loss,standard
+Amortisation,الإطفاء,,profit or loss,standard
+Impairment loss,خسارة انخفاض القيمة,,profit or loss,standard
+Impairment loss on trade receivables,خسارة انخفاض قيمة الذمم المدينة التجارية,,profit or loss,standard
+Expected credit losses,الخسائر الائتمانية المتوقعة,,profit or loss,standard
+Operating profit,الربح التشغيلي,,profit or loss,standard
+Finance costs,تكاليف التمويل,,profit or loss,standard
+Finance income,إيرادات التمويل,,profit or loss,standard
+Finance costs on lease liabilities,تكاليف التمويل على مطلوبات الإيجار,تكاليف التمويل على التزامات الإيجار,profit or loss,standard
+Interest income,إيرادات الفوائد,,profit or loss,standard
+Net interest income,صافي إيرادات الفوائد,,profit or loss,standard
+Fee and commission income,إيرادات الرسوم والعمولات,,profit or loss,standard
+Profit before tax,الربح قبل الضريبة,,profit or loss,standard
+Income tax expense,مصروف ضريبة الدخل,,profit or loss,standard
+Zakat,الزكاة,,profit or loss,standard
+Profit for the year,ربح السنة,,profit or loss,standard
+Loss for the year,خسارة السنة,,profit or loss,standard
+Other comprehensive income,الدخل الشامل الآخر,,profit or loss,standard
+Other comprehensive income for the year,الدخل الشامل الآخر للسنة,,profit or loss,standard
+Total comprehensive income for the year,مجموع الدخل الشامل للسنة,إجمالي الدخل الشامل للسنة,profit or loss,standard
+Earnings per share,العائد على السهم,ربحية السهم,profit or loss,review
+Basic and diluted earnings per share,العائد الأساسي والمخفض على السهم,ربحية السهم الأساسية والمخفضة,profit or loss,review
+Operating activities,الأنشطة التشغيلية,,cash flows,standard
+Investing activities,الأنشطة الاستثمارية,,cash flows,standard
+Financing activities,الأنشطة التمويلية,,cash flows,standard
+Cash flows from operating activities,التدفقات النقدية من الأنشطة التشغيلية,,cash flows,standard
+Cash flows from investing activities,التدفقات النقدية من الأنشطة الاستثمارية,,cash flows,standard
+Cash flows from financing activities,التدفقات النقدية من الأنشطة التمويلية,,cash flows,standard
+Net cash generated from operating activities,صافي النقد الناتج من الأنشطة التشغيلية,,cash flows,standard
+Net cash used in investing activities,صافي النقد المستخدم في الأنشطة الاستثمارية,,cash flows,standard
+Net cash used in financing activities,صافي النقد المستخدم في الأنشطة التمويلية,,cash flows,standard
+Working capital changes,التغيرات في رأس المال العامل,,cash flows,standard
+Purchase of property and equipment,شراء ممتلكات ومعدات,,cash flows,standard
+Net increase in cash and cash equivalents,صافي الزيادة في النقد وما في حكمه,,cash flows,standard
+Net decrease in cash and cash equivalents,صافي النقص في النقد وما في حكمه,,cash flows,standard
+Cash and cash equivalents at the beginning of the year,النقد وما في حكمه في بداية السنة,,cash flows,standard
+Cash and cash equivalents at the end of the year,النقد وما في حكمه في نهاية السنة,,cash flows,standard
+Opinion,الرأي,,audit report,standard
+Basis for opinion,أساس الرأي,,audit report,standard
+Key audit matters,أمور التدقيق الرئيسية,أمور المراجعة الرئيسية,audit report,standard
+Other information,المعلومات الأخرى,,audit report,standard
+Responsibilities of the board of directors for the financial statements,مسؤوليات مجلس الإدارة عن البيانات المالية,مسؤوليات مجلس الإدارة عن القوائم المالية,audit report,standard
+Auditor's responsibilities for the audit of the financial statements,مسؤوليات مدقق الحسابات عن تدقيق البيانات المالية,مسؤوليات المراجع عن مراجعة القوائم المالية,audit report,standard
+Report on other legal and regulatory requirements,تقرير حول المتطلبات القانونية والتنظيمية الأخرى,,audit report,standard
+Report on other regulatory requirements,تقرير حول المتطلبات التنظيمية الأخرى,,audit report,standard
+International Standards on Auditing,المعايير الدولية للتدقيق,المعايير الدولية للمراجعة,audit report,standard
+International Code of Ethics for Professional Accountants,الميثاق الدولي لأخلاقيات المحاسبين المهنيين,الميثاق الدولي لسلوك وآداب المهنة,audit report,review
+Material misstatement,الأخطاء الجوهرية,التحريف الجوهري,audit report,review
+Professional judgment,الاجتهاد المهني,الحكم المهني,audit report,review
+Professional judgement,الاجتهاد المهني,الحكم المهني,audit report,review
+Professional scepticism,الشك المهني,نزعة الشك المهني,audit report,review
+Going concern,الاستمرارية,,audit report,standard
+Going concern basis of accounting,مبدأ الاستمرارية المحاسبي,أساس الاستمرارية المحاسبي,audit report,review
+Material uncertainty,عدم يقين جوهري,,audit report,standard
+Internal control,الرقابة الداخلية,,audit report,standard
+Audit evidence,أدلة التدقيق,أدلة المراجعة,audit report,standard
+Fraud or error,الاحتيال أو الخطأ,الغش أو الخطأ,audit report,review
+Partner registration no.,رقم تسجيل الشريك,,audit report,standard
+IFRS Accounting Standards,المعايير المحاسبية الدولية لإعداد التقارير المالية,المعايير الدولية للتقرير المالي,concepts,review
+International Financial Reporting Standards,المعايير الدولية لإعداد التقارير المالية,المعايير الدولية للتقرير المالي,concepts,standard
+International Accounting Standards Board,مجلس المعايير المحاسبية الدولية,,concepts,standard
+International Accounting Standards,معايير المحاسبة الدولية,,concepts,standard
+Material accounting policies,السياسات المحاسبية الجوهرية,السياسات المحاسبية ذات الأهمية النسبية,concepts,review
+Significant accounting policies,السياسات المحاسبية الهامة,,concepts,standard
+Accounting policies,السياسات المحاسبية,,concepts,standard
+Accounting estimates,التقديرات المحاسبية,,concepts,standard
+Critical accounting judgements,الأحكام المحاسبية الهامة,,concepts,standard
+Basis of preparation,أساس الإعداد,,concepts,standard
+Statement of compliance,بيان الالتزام,,concepts,standard
+Basis of measurement,أساس القياس,,concepts,standard
+Fair value,القيمة العادلة,,concepts,standard
+Fair value through other comprehensive income,القيمة العادلة من خلال الدخل الشامل الآخر,,concepts,standard
+Fair value through profit or loss,القيمة العادلة من خلال الربح أو الخسارة,,concepts,standard
+Amortised cost,التكلفة المطفأة,,concepts,standard
+Carrying amount,القيمة الدفترية,,concepts,standard
+Historical cost,التكلفة التاريخية,,concepts,standard
+Functional currency,العملة الوظيفية,,concepts,standard
+Presentation currency,عملة العرض,,concepts,standard
+Reporting period,فترة التقرير,,concepts,standard
+Events after the reporting period,الأحداث بعد فترة التقرير,,concepts,standard
+Comparative figures,أرقام المقارنة,,concepts,standard
+Financial instruments,الأدوات المالية,,concepts,standard
+Leases,عقود الإيجار,,concepts,standard
+Related parties,الأطراف ذات العلاقة,,concepts,standard
+Related party transactions,المعاملات مع الأطراف ذات العلاقة,,concepts,standard
+Risk management,إدارة المخاطر,,concepts,standard
+Credit risk,مخاطر الائتمان,,concepts,standard
+Liquidity risk,مخاطر السيولة,,concepts,standard
+Market risk,مخاطر السوق,,concepts,standard
+Interest rate risk,مخاطر أسعار الفائدة,,concepts,standard
+Currency risk,مخاطر العملات,,concepts,standard
+Capital management,إدارة رأس المال,,concepts,standard
+Segment information,معلومات القطاعات,,concepts,standard
+Parent company,الشركة الأم,,concepts,standard
+Subsidiaries,الشركات التابعة,,concepts,standard
+Associates,الشركات الزميلة,,concepts,standard
+Principal activities,الأنشطة الرئيسية,,concepts,standard
+Board of directors,مجلس الإدارة,,governance,standard
+Directors,أعضاء مجلس الإدارة,,governance,standard
+Chairman,رئيس مجلس الإدارة,,governance,standard
+Vice Chairman,نائب رئيس مجلس الإدارة,,governance,standard
+Chief Executive Officer,الرئيس التنفيذي,,governance,standard
+Chief Financial Officer,المدير المالي,,governance,review
+Managing Director,العضو المنتدب,,governance,standard
+Registered office,المكتب المسجل,,governance,standard
+Bankers,البنوك,,governance,review
+Auditors,مدققو الحسابات,المراجعون,governance,standard
+Commercial registration,السجل التجاري,,governance,standard
+Commercial registration no.,رقم السجل التجاري,,governance,standard
+Bahrain Commercial Companies Law,قانون الشركات التجارية البحريني,,governance,standard
+W.L.L.,ذ.م.م,,legal forms,standard
+B.S.C.,ش.م.ب,,legal forms,standard
+B.S.C. (c),ش.م.ب (مقفلة),,legal forms,standard
+PJSC,ش.م.ع,,legal forms,standard
+P.J.S.C.,ش.م.ع,,legal forms,standard
+L.L.C.,ذ.م.م,,legal forms,standard
+LLC,ذ.م.م,,legal forms,standard
+S.A.O.G.,ش.م.ع.ع,,legal forms,standard
+S.A.O.C.,ش.م.ع.م,,legal forms,standard
+Q.P.S.C.,ش.م.ع.ق,,legal forms,standard
+K.S.C.P.,ش.م.ك.ع,,legal forms,standard
+Kingdom of Bahrain,مملكة البحرين,,places,standard
+United Arab Emirates,الإمارات العربية المتحدة,,places,standard
+Kingdom of Saudi Arabia,المملكة العربية السعودية,,places,standard
+State of Qatar,دولة قطر,,places,standard
+State of Kuwait,دولة الكويت,,places,standard
+Sultanate of Oman,سلطنة عمان,,places,standard
+Manama,المنامة,,places,standard
+Dubai,دبي,,places,standard
+Abu Dhabi,أبوظبي,,places,standard
+Riyadh,الرياض,,places,standard
+Doha,الدوحة,,places,standard
+Muscat,مسقط,,places,standard
+BD,دينار بحريني,,currencies,standard
+BHD,دينار بحريني,,currencies,standard
+Bahraini Dinar,دينار بحريني,,currencies,standard
+AED,درهم إماراتي,,currencies,standard
+UAE Dirham,درهم إماراتي,,currencies,standard
+SAR,ريال سعودي,,currencies,standard
+Saudi Riyal,ريال سعودي,,currencies,standard
+QAR,ريال قطري,,currencies,standard
+KWD,دينار كويتي,,currencies,standard
+OMR,ريال عماني,,currencies,standard
+RO,ريال عماني,,currencies,standard
+USD,دولار أمريكي,,currencies,standard
+US Dollar,دولار أمريكي,,currencies,standard
+Presentation of Financial Statements,عرض البيانات المالية,عرض القوائم المالية,standard titles,standard
+Presentation and Disclosure in Financial Statements,العرض والإفصاح في البيانات المالية,العرض والإفصاح في القوائم المالية,standard titles,standard
+Fair Value Measurement,قياس القيمة العادلة,,standard titles,standard
+Income Taxes,ضرائب الدخل,,standard titles,standard
+Impairment of Assets,انخفاض قيمة الموجودات,الهبوط في قيمة الأصول,standard titles,review
+Related Party Disclosures,إفصاحات الأطراف ذات العلاقة,,standard titles,standard
+"Accounting Policies, Changes in Accounting Estimates and Errors",السياسات المحاسبية والتغيرات في التقديرات المحاسبية والأخطاء,,standard titles,standard
+"Provisions, Contingent Liabilities and Contingent Assets",المخصصات والمطلوبات الطارئة والموجودات الطارئة,المخصصات والالتزامات المحتملة والأصول المحتملة,standard titles,standard
+Employee Benefits,مكافآت الموظفين,منافع الموظفين,standard titles,review
+The Effects of Changes in Foreign Exchange Rates,آثار التغيرات في أسعار صرف العملات الأجنبية,,standard titles,standard
+Investments in Associates and Joint Ventures,الاستثمارات في الشركات الزميلة والمشاريع المشتركة,,standard titles,standard
+Financial Instruments: Disclosures,الأدوات المالية: الإفصاحات,,standard titles,standard
+Financial Instruments: Presentation,الأدوات المالية: العرض,,standard titles,standard
+Share-based Payment,الدفع على أساس الأسهم,,standard titles,standard
+Business Combinations,اندماج الأعمال,تجميع الأعمال,standard titles,review
+Non-current Assets Held for Sale and Discontinued Operations,الموجودات غير المتداولة المحتفظ بها للبيع والعمليات المتوقفة,الأصول غير المتداولة المحتفظ بها للبيع والعمليات غير المستمرة,standard titles,standard
+Interim Financial Reporting,التقارير المالية المرحلية,التقرير المالي الأولي,standard titles,review
+Borrowing Costs,تكاليف الاقتراض,,standard titles,standard
+Accounting for Government Grants and Disclosure of Government Assistance,المحاسبة عن المنح الحكومية والإفصاح عن المساعدات الحكومية,,standard titles,standard
+First-time Adoption of International Financial Reporting Standards,تطبيق المعايير الدولية لإعداد التقارير المالية لأول مرة,تطبيق المعايير الدولية للتقرير المالي لأول مرة,standard titles,standard
+Joint Arrangements,الترتيبات المشتركة,,standard titles,standard
+Disclosure of Interests in Other Entities,الإفصاح عن الحصص في المنشآت الأخرى,,standard titles,standard
+Operating Segments,القطاعات التشغيلية,,standard titles,standard
+Insurance Contracts,عقود التأمين,,standard titles,standard
+Capital work-in-progress,أعمال رأسمالية قيد التنفيذ,,assets,standard
+Investment in subsidiaries,استثمار في شركات تابعة,,assets,standard
+Financial assets at fair value through other comprehensive income,الموجودات المالية بالقيمة العادلة من خلال الدخل الشامل الآخر,الأصول المالية بالقيمة العادلة من خلال الدخل الشامل الآخر,assets,standard
+Derivative financial instruments,الأدوات المالية المشتقة,,assets,standard
+Advances to suppliers,دفعات مقدمة للموردين,,assets,standard
+Other receivables,الذمم المدينة الأخرى,,assets,standard
+Short-term deposits,ودائع قصيرة الأجل,,assets,standard
+Cash on hand,النقد في الصندوق,,assets,standard
+Cash at banks,النقد لدى البنوك,,assets,standard
+Restricted cash,النقد المقيد,,assets,standard
+Retention receivable,المحتجزات المدينة,,assets,review
+Contingent assets,الموجودات الطارئة,الأصول المحتملة,assets,standard
+Land and buildings,الأراضي والمباني,,assets,standard
+Furniture and fixtures,الأثاث والتجهيزات,,assets,standard
+Motor vehicles,السيارات,,assets,standard
+Office equipment,المعدات المكتبية,,assets,standard
+Computer equipment,أجهزة الحاسوب,,assets,standard
+Leasehold improvements,تحسينات على عقارات مستأجرة,,assets,standard
+Plant and machinery,المصانع والآلات,,assets,review
+Accumulated depreciation,الاستهلاك المتراكم,,assets,standard
+Accumulated amortisation,الإطفاء المتراكم,,assets,standard
+Accumulated impairment losses,خسائر انخفاض القيمة المتراكمة,,assets,standard
+Net book value,صافي القيمة الدفترية,,assets,standard
+Allowance for expected credit losses,مخصص الخسائر الائتمانية المتوقعة,,assets,standard
+Provision for slow-moving inventories,مخصص المخزون بطيء الحركة,,assets,standard
+Loss allowance,مخصص الخسارة,,assets,standard
+Due to banks,المستحق إلى البنوك,,banks,standard
+Due to banks and other financial institutions,المستحق إلى البنوك والمؤسسات المالية الأخرى,,banks,standard
+Due from banks,المستحق من البنوك,,banks,standard
+Due from banks and other financial institutions,المستحق من البنوك والمؤسسات المالية الأخرى,,banks,standard
+Due to customers,المستحق إلى العملاء,,banks,standard
+Due to the Central Bank,المستحق إلى المصرف المركزي,المستحق إلى البنك المركزي,banks,review
+Placements with banks and other financial institutions,الإيداعات لدى البنوك والمؤسسات المالية الأخرى,,banks,standard
+Placements with banks,الإيداعات لدى البنوك,,banks,standard
+Cash and balances with central banks,النقد والأرصدة لدى البنوك المركزية,,banks,standard
+Deposits from banks,ودائع من البنوك,,banks,standard
+Deposits from customers,ودائع من العملاء,,banks,standard
+Customer deposits,ودائع العملاء,,banks,standard
+Repurchase agreements,اتفاقيات إعادة الشراء,,banks,standard
+Net interest margin,صافي هامش الفائدة,,banks,standard
+Net fee and commission income,صافي إيرادات الرسوم والعمولات,,banks,standard
+Capital adequacy ratio,معدل كفاية رأس المال,,banks,standard
+Other payables,الذمم الدائنة الأخرى,,liabilities,standard
+Accrued expenses and other payables,المصروفات المستحقة والذمم الدائنة الأخرى,,liabilities,standard
+Advances from customers,دفعات مقدمة من العملاء,,liabilities,standard
+Unearned revenue,إيرادات غير مكتسبة,,liabilities,standard
+Retention payable,المحتجزات الدائنة,,liabilities,review
+Bank facilities,التسهيلات البنكية,,liabilities,standard
+Short-term borrowings,قروض قصيرة الأجل,,liabilities,standard
+Long-term borrowings,قروض طويلة الأجل,,liabilities,standard
+Current portion of term loans,الجزء المتداول من القروض لأجل,,liabilities,standard
+Non-current portion of term loans,الجزء غير المتداول من القروض لأجل,,liabilities,standard
+Dividends payable,توزيعات الأرباح المستحقة الدفع,,liabilities,standard
+Value added tax,ضريبة القيمة المضافة,,liabilities,standard
+Value added tax payable,ضريبة القيمة المضافة المستحقة,,liabilities,standard
+Defined benefit obligation,التزام المنافع المحددة,,liabilities,standard
+Letters of guarantee,خطابات الضمان,,liabilities,standard
+Letters of credit,الاعتمادات المستندية,,liabilities,standard
+Capital commitments,الارتباطات الرأسمالية,,liabilities,standard
+Commitments and contingencies,الارتباطات والمطلوبات الطارئة,الارتباطات والالتزامات المحتملة,liabilities,standard
+Contingencies and commitments,المطلوبات الطارئة والارتباطات,الالتزامات المحتملة والارتباطات,liabilities,standard
+Legal claims,المطالبات القانونية,,liabilities,standard
+Equity attributable to owners of the Company,حقوق الملكية العائدة إلى مالكي الشركة,حقوق الملكية العائدة إلى ملاك الشركة,equity,standard
+Equity attributable to owners of the Parent,حقوق الملكية العائدة إلى مالكي الشركة الأم,حقوق الملكية العائدة إلى ملاك الشركة الأم,equity,standard
+Legal reserve,الاحتياطي القانوني,الاحتياطي النظامي,equity,standard
+Revaluation reserve,احتياطي إعادة التقييم,,equity,standard
+Hedging reserve,احتياطي التحوط,,equity,standard
+Capital reserve,الاحتياطي الرأسمالي,,equity,standard
+Transfer to statutory reserve,المحول إلى الاحتياطي القانوني,المحول إلى الاحتياطي النظامي,equity,standard
+Transfer to legal reserve,المحول إلى الاحتياطي القانوني,المحول إلى الاحتياطي النظامي,equity,standard
+Dividends declared,توزيعات الأرباح المعلنة,,equity,standard
+Directors' remuneration,مكافآت أعضاء مجلس الإدارة,,equity,standard
+Balance at the beginning of the year,الرصيد في بداية السنة,,equity,standard
+Balance at the end of the year,الرصيد في نهاية السنة,,equity,standard
+Issued and fully paid,المصدر والمدفوع بالكامل,,equity,standard
+Authorised share capital,رأس المال المصرح به,,equity,standard
+Issued share capital,رأس المال المصدر,,equity,standard
+Ordinary shares,الأسهم العادية,,equity,standard
+Nominal value,القيمة الاسمية,,equity,standard
+Items that will not be reclassified to profit or loss,بنود لن يعاد تصنيفها إلى الأرباح أو الخسائر,بنود لن يعاد تصنيفها إلى الربح أو الخسارة,profit or loss,standard
+Items that may be reclassified subsequently to profit or loss,بنود قد يعاد تصنيفها لاحقاً إلى الأرباح أو الخسائر,بنود قد يعاد تصنيفها لاحقاً إلى الربح أو الخسارة,profit or loss,standard
+Items that are or may be reclassified subsequently to profit or loss,بنود يتم أو قد يتم إعادة تصنيفها لاحقاً إلى الأرباح أو الخسائر,بنود يتم أو قد يتم إعادة تصنيفها لاحقاً إلى الربح أو الخسارة,profit or loss,standard
+Remeasurement of defined benefit obligations,إعادة قياس التزامات المنافع المحددة,,profit or loss,standard
+Total other comprehensive income,مجموع الدخل الشامل الآخر,إجمالي الدخل الشامل الآخر,profit or loss,standard
+Share of profit of associates,الحصة من أرباح الشركات الزميلة,,profit or loss,standard
+Net finance costs,صافي تكاليف التمويل,,profit or loss,standard
+Interest expense,مصروفات الفوائد,,profit or loss,standard
+Interest expense on lease liabilities,مصروفات الفوائد على مطلوبات الإيجار,مصروفات الفوائد على التزامات الإيجار,profit or loss,standard
+Depreciation of property and equipment,استهلاك الممتلكات والمعدات,,profit or loss,standard
+Depreciation of right-of-use assets,استهلاك موجودات حق الاستخدام,استهلاك أصول حق الاستخدام,profit or loss,standard
+Gain on disposal of property and equipment,ربح استبعاد الممتلكات والمعدات,,profit or loss,standard
+Loss on disposal of property and equipment,خسارة استبعاد الممتلكات والمعدات,,profit or loss,standard
+Foreign exchange gain,أرباح صرف العملات الأجنبية,,profit or loss,standard
+Foreign exchange loss,خسائر صرف العملات الأجنبية,,profit or loss,standard
+Rental income,إيرادات الإيجار,,profit or loss,standard
+Dividend income,إيرادات توزيعات الأرباح,,profit or loss,standard
+Salaries and related benefits,الرواتب والمزايا ذات العلاقة,,profit or loss,standard
+Employee benefits expense,مصروف مكافآت الموظفين,مصروف منافع الموظفين,profit or loss,review
+Professional fees,الأتعاب المهنية,,profit or loss,standard
+Rent expense,مصروف الإيجار,,profit or loss,standard
+Advertising and marketing,الإعلان والتسويق,,profit or loss,standard
+Repairs and maintenance,الإصلاحات والصيانة,,profit or loss,standard
+Bank charges,الرسوم البنكية,,profit or loss,standard
+Travel expenses,مصروفات السفر,,profit or loss,standard
+Miscellaneous expenses,مصروفات متنوعة,,profit or loss,standard
+Operating expenses,المصروفات التشغيلية,,profit or loss,standard
+Cost of goods sold,تكلفة البضاعة المباعة,,profit or loss,standard
+Sale of goods,بيع البضائع,,profit or loss,standard
+Rendering of services,تقديم الخدمات,,profit or loss,standard
+Timing of revenue recognition,توقيت الاعتراف بالإيرادات,,profit or loss,standard
+At a point in time,في وقت محدد,,profit or loss,standard
+Profit before zakat,الربح قبل الزكاة,,profit or loss,standard
+Profit before zakat and income tax,الربح قبل الزكاة وضريبة الدخل,,profit or loss,standard
+Current income tax,ضريبة الدخل الحالية,,profit or loss,standard
+Deferred income tax,ضريبة الدخل المؤجلة,,profit or loss,standard
+Weighted average number of ordinary shares,المتوسط المرجح لعدد الأسهم العادية,,profit or loss,standard
+Basic earnings per share,العائد الأساسي على السهم,ربحية السهم الأساسية,profit or loss,review
+Diluted earnings per share,العائد المخفض على السهم,ربحية السهم المخفضة,profit or loss,review
+Changes in working capital,التغيرات في رأس المال العامل,,cash flows,standard
+Cash generated from operations,النقد الناتج من العمليات,,cash flows,standard
+End of service benefits paid,مكافآت نهاية الخدمة المدفوعة,,cash flows,standard
+Interest paid,الفوائد المدفوعة,,cash flows,standard
+Income tax paid,ضريبة الدخل المدفوعة,,cash flows,standard
+Zakat paid,الزكاة المدفوعة,,cash flows,standard
+Proceeds from disposal of property and equipment,متحصلات من استبعاد ممتلكات ومعدات,,cash flows,standard
+Proceeds from borrowings,متحصلات من القروض,,cash flows,standard
+Repayment of borrowings,سداد القروض,,cash flows,standard
+Payment of lease liabilities,سداد مطلوبات الإيجار,سداد التزامات الإيجار,cash flows,standard
+Dividends paid,توزيعات الأرباح المدفوعة,,cash flows,standard
+Net cash used in operating activities,صافي النقد المستخدم في الأنشطة التشغيلية,,cash flows,standard
+Net cash from operating activities,صافي النقد من الأنشطة التشغيلية,,cash flows,standard
+Net cash generated from investing activities,صافي النقد الناتج من الأنشطة الاستثمارية,,cash flows,standard
+Net cash generated from financing activities,صافي النقد الناتج من الأنشطة التمويلية,,cash flows,standard
+Non-cash transactions,المعاملات غير النقدية,,cash flows,standard
+Additions to right-of-use assets,إضافات إلى موجودات حق الاستخدام,إضافات إلى أصول حق الاستخدام,cash flows,standard
+Legal status and principal activities,الوضع القانوني والأنشطة الرئيسية,,notes,standard
+Basis of preparation and material accounting policies,أساس الإعداد والسياسات المحاسبية الجوهرية,أساس الإعداد والسياسات المحاسبية ذات الأهمية النسبية,notes,review
+Summary of material accounting policies,ملخص السياسات المحاسبية الجوهرية,ملخص السياسات المحاسبية ذات الأهمية النسبية,notes,review
+New and amended standards and interpretations,المعايير والتفسيرات الجديدة والمعدلة,,notes,standard
+Standards issued but not yet effective,المعايير الصادرة وغير السارية بعد,,notes,standard
+Use of estimates and judgements,استخدام التقديرات والأحكام,,notes,standard
+"Significant accounting judgements, estimates and assumptions",الأحكام والتقديرات والافتراضات المحاسبية الهامة,,notes,standard
+Key sources of estimation uncertainty,المصادر الرئيسية لعدم التيقن في التقديرات,,notes,standard
+Functional and presentation currency,العملة الوظيفية وعملة العرض,,notes,standard
+Foreign currency transactions,المعاملات بالعملات الأجنبية,,notes,standard
+Revenue recognition,الاعتراف بالإيرادات,,notes,standard
+Lower of cost and net realisable value,التكلفة أو صافي القيمة القابلة للتحقق، أيهما أقل,,notes,standard
+Net realisable value,صافي القيمة القابلة للتحقق,,notes,standard
+Weighted average cost,المتوسط المرجح للتكلفة,,notes,standard
+Straight-line method,طريقة القسط الثابت,,notes,standard
+Straight-line basis,أساس القسط الثابت,,notes,standard
+Estimated useful lives,الأعمار الإنتاجية المقدرة,,notes,standard
+Useful lives,الأعمار الإنتاجية,,notes,standard
+Residual values,القيم المتبقية,,notes,standard
+Incremental borrowing rate,معدل الاقتراض الإضافي,,notes,standard
+Short-term leases,عقود الإيجار قصيرة الأجل,,notes,standard
+Leases of low-value assets,عقود إيجار الموجودات منخفضة القيمة,عقود إيجار الأصول منخفضة القيمة,notes,standard
+Lease term,مدة عقد الإيجار,,notes,standard
+Lease payments,دفعات الإيجار,,notes,standard
+Defined benefit plan,خطة المنافع المحددة,,notes,standard
+Defined contribution plan,خطة المساهمات المحددة,,notes,standard
+Effective interest method,طريقة معدل الفائدة الفعلي,,notes,standard
+Effective interest rate,معدل الفائدة الفعلي,,notes,standard
+Lifetime expected credit losses,الخسائر الائتمانية المتوقعة على مدى العمر,,notes,standard
+Probability of default,احتمالية التعثر,,notes,standard
+Loss given default,الخسارة عند التعثر,,notes,standard
+Exposure at default,التعرض عند التعثر,,notes,standard
+Significant increase in credit risk,الزيادة الجوهرية في مخاطر الائتمان,,notes,standard
+Derecognition of financial assets,إلغاء الاعتراف بالموجودات المالية,إلغاء الاعتراف بالأصول المالية,notes,standard
+Offsetting of financial instruments,مقاصة الأدوات المالية,,notes,standard
+Fair value hierarchy,التسلسل الهرمي للقيمة العادلة,,notes,standard
+Quoted prices in active markets,الأسعار المدرجة في أسواق نشطة,,notes,standard
+Observable market data,بيانات السوق القابلة للملاحظة,,notes,standard
+Unobservable inputs,المدخلات غير القابلة للملاحظة,,notes,standard
+Cash-generating unit,الوحدة المنتجة للنقد,,notes,standard
+Recoverable amount,القيمة القابلة للاسترداد,,notes,standard
+Value in use,القيمة من الاستخدام,,notes,standard
+Fair value less costs of disposal,القيمة العادلة ناقصاً تكاليف الاستبعاد,,notes,standard
+Impairment of non-financial assets,انخفاض قيمة الموجودات غير المالية,الهبوط في قيمة الأصول غير المالية,notes,review
+Impairment of financial assets,انخفاض قيمة الموجودات المالية,الهبوط في قيمة الأصول المالية,notes,review
+Going concern assumption,افتراض الاستمرارية,,notes,standard
+Comparative information,معلومات المقارنة,,notes,standard
+Reclassification of comparative figures,إعادة تصنيف أرقام المقارنة,,notes,standard
+Subsequent events,الأحداث اللاحقة,,notes,standard
+Approval of the financial statements,اعتماد البيانات المالية,اعتماد القوائم المالية,notes,standard
+Transactions with related parties,المعاملات مع الأطراف ذات العلاقة,,related parties,standard
+Balances with related parties,الأرصدة مع الأطراف ذات العلاقة,,related parties,standard
+Key management personnel,موظفو الإدارة الرئيسيون,كبار موظفي الإدارة,related parties,review
+Compensation of key management personnel,مكافآت موظفي الإدارة الرئيسيين,مكافآت كبار موظفي الإدارة,related parties,review
+Terms and conditions of transactions with related parties,شروط وأحكام المعاملات مع الأطراف ذات العلاقة,,related parties,standard
+Ultimate parent company,الشركة الأم الرئيسية,,related parties,standard
+Ultimate controlling party,الطرف المسيطر النهائي,,related parties,standard
+Financial risk management,إدارة المخاطر المالية,,risk,standard
+Financial risk management objectives and policies,أهداف وسياسات إدارة المخاطر المالية,,risk,standard
+Foreign currency risk,مخاطر العملات الأجنبية,,risk,standard
+Equity price risk,مخاطر أسعار الأسهم,,risk,standard
+Concentration of credit risk,تركز مخاطر الائتمان,,risk,standard
+Maximum exposure to credit risk,الحد الأقصى للتعرض لمخاطر الائتمان,,risk,standard
+Contractual maturities,الاستحقاقات التعاقدية,,risk,standard
+Contractual undiscounted cash flows,التدفقات النقدية التعاقدية غير المخصومة,,risk,standard
+Sensitivity analysis,تحليل الحساسية,,risk,standard
+Fair value of financial instruments,القيمة العادلة للأدوات المالية,,risk,standard
+Segment reporting,التقارير القطاعية,,risk,standard
+Report on the audit of the financial statements,تقرير حول تدقيق البيانات المالية,تقرير عن مراجعة القوائم المالية,audit report,standard
+Independent auditor's report to the shareholders,تقرير مدقق الحسابات المستقل إلى المساهمين,تقرير المراجع المستقل إلى المساهمين,audit report,standard
+Material uncertainty related to going concern,عدم يقين جوهري متعلق بالاستمرارية,,audit report,standard
+Emphasis of matter,لفت انتباه,,audit report,review
+Qualified opinion,رأي متحفظ,,audit report,standard
+Basis for qualified opinion,أساس الرأي المتحفظ,,audit report,standard
+Adverse opinion,رأي معارض,,audit report,review
+Disclaimer of opinion,الامتناع عن إبداء الرأي,,audit report,standard
+Those charged with governance,المكلفون بالحوكمة,,audit report,standard
+Reasonable assurance,تأكيد معقول,,audit report,standard
+Sufficient and appropriate audit evidence,أدلة تدقيق كافية ومناسبة,أدلة مراجعة كافية ومناسبة,audit report,standard
+In all material respects,من كافة النواحي الجوهرية,من جميع الجوانب الجوهرية,audit report,standard
+Override of internal control,تجاوز الرقابة الداخلية,,audit report,standard
+Audit procedures,إجراءات التدقيق,إجراءات المراجعة,audit report,standard
+Significant audit findings,نتائج التدقيق الهامة,نتائج المراجعة المهمة,audit report,standard
+Ethical requirements,المتطلبات الأخلاقية,,audit report,standard
+Partner registration number,رقم تسجيل الشريك,,audit report,standard
+Audit Committee,لجنة التدقيق,لجنة المراجعة,governance,standard
+Corporate governance,حوكمة الشركات,,governance,standard
+Chief Operating Officer,الرئيس التنفيذي للعمليات,,governance,standard
+Group Chief Executive Officer,الرئيس التنفيذي للمجموعة,,governance,standard
+Central Bank of Bahrain,مصرف البحرين المركزي,,regulators,standard
+Ministry of Industry and Commerce,وزارة الصناعة والتجارة,,regulators,standard
+National Bureau for Revenue,الجهاز الوطني للإيرادات,,regulators,standard
+Social Insurance Organisation,الهيئة العامة للتأمين الاجتماعي,,regulators,review
+Central Bank of the UAE,مصرف الإمارات العربية المتحدة المركزي,,regulators,standard
+Federal Tax Authority,الهيئة الاتحادية للضرائب,,regulators,standard
+Securities and Commodities Authority,هيئة الأوراق المالية والسلع,,regulators,standard
+Saudi Central Bank,البنك المركزي السعودي,,regulators,standard
+Capital Market Authority,هيئة السوق المالية,,regulators,standard
+"Zakat, Tax and Customs Authority",هيئة الزكاة والضريبة والجمارك,,regulators,standard
+Saudi Organization for Chartered and Professional Accountants,الهيئة السعودية للمراجعين والمحاسبين,,regulators,standard
+Bahrain Bourse,بورصة البحرين,,regulators,standard
+Dubai Financial Market,سوق دبي المالي,,regulators,standard
+Abu Dhabi Securities Exchange,سوق أبوظبي للأوراق المالية,,regulators,standard
+Saudi Exchange,السوق المالية السعودية,,regulators,standard
+Qatar Stock Exchange,بورصة قطر,,regulators,standard
+Boursa Kuwait,بورصة الكويت,,regulators,standard
+Muscat Stock Exchange,بورصة مسقط,,regulators,standard
+Commercial Companies Law,قانون الشركات التجارية,,regulators,standard
+Articles of Association,النظام الأساسي,,regulators,standard
+Memorandum of Association,عقد التأسيس,,regulators,standard
+Commercial registration certificate,شهادة السجل التجاري,,regulators,standard
